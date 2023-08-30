@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rgbToHex</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="rgb">RGB(20,74,128)</p>
+    <p id="hex">#144a80</p>
+    <!--for red   -->
+    <div id="prog_r" class="prog">
+        <div id="bar_r" class="bar bar_r"> 20</div>
+        <input type="range" id="rng_r" min="0" max="255" class="rng" value="20" />
+    </div>
+
+    <!--for yellow  -->
+    <div id="prog_g" class="prog">
+        <div id="bar_g" class="bar bar_g"> 74</div>
+        <input type="range" id="rng_g" min="0" max="255" class="rng" value="74" />
+    </div>
+
+    <!--for blue   -->
+    <div id="prog_b" class="prog">
+        <div id="bar_b" class="bar bar_b"> 128</div>
+        <input type="range" id="rng_b" min="0" max="255" class="rng" value="128" />
+    </div>
+    <input type="button" class="btn" id="btn" value="Random Color" />
+
+</body>
+
+</html>
