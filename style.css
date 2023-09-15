@@ -76,3 +76,8 @@ p {
     transform: translateX(-50%);
     margin: 20px auto;
 }
+
+h1,h5 {
+    position:relative;
+    text-align:center;
+}
