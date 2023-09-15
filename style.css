@@ -80,4 +80,5 @@ p {
 h1,h5 {
     position:relative;
     text-align:center;
+    left:50%;
 }
