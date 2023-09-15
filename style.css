@@ -55,6 +55,15 @@ body {
     -webkit-appearance: none;
     margin-top: -3.6px;
 }
+#rng_r::-webkit-slider-thumb {
+    background: #ff0000;
+}
+#rng_g::-webkit-slider-thumb {
+    background: #00ff00;
+}
+#rng_b::-webkit-slider-thumb {
+    background: #0000ff;
+}
 
 p {
     position: relative;
@@ -82,4 +91,10 @@ h1,h5 {
     text-align:center;
     left:50%;
     transform: translateX(-50%);
+}
+h5{
+    color:aqua
+}
+header{
+    background-color: #d1317b;
 }
