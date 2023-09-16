@@ -11,16 +11,17 @@ jobs:
 
     - name: Count files, characters, lines, and file size
       run: |
-        total_files=$(find . -type f | wc -l)
-        total_characters=$(find . -type f -exec cat {} + | wc -m)
-        total_lines=$(find . -type f -exec cat {} + | wc -l)
+        # total_files=$(find . -type f | wc -l)
+        # total_characters=$(find . -type f -exec cat {} + | wc -m)
+        # total_lines=$(find . -type f -exec cat {} + | wc -l)
         
-        echo "Total Files: $total_files" > stats.txt
-        echo "Total Characters: $total_characters" >> stats.txt
-        echo "Total Lines: $total_lines" >> stats.txt
-        find . -type f -exec du -ch {} + >> stats.txt
+        # echo "Total Files: $total_files" > stats.txt
+        # echo "Total Characters: $total_characters" >> stats.txt
+        # echo "Total Lines: $total_lines" >> stats.txt
+        # find . -type f -exec du -ch {} + >> stats.txt
         
-        cat stats.txt
+        # cat stats.txt
+        echo "welcome to github action" > stats.txt
       shell: bash
 
     - name: Commit and push stats.txt
