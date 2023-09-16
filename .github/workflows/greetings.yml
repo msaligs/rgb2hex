@@ -1,4 +1,4 @@
-name: stats_update
+name: Greetings
 
 on: [push]
 
@@ -21,7 +21,7 @@ jobs:
         # find . -type f -exec du -ch {} + >> stats.txt
         
         # cat stats.txt
-        echo "welcome to github action" > stats.txt
+        echo "basic stats" > stats.txt
       shell: bash
 
     - name: Commit and push stats.txt
@@ -30,4 +30,6 @@ jobs:
         git config --global user.name "GitHub Action"
         git add stats.txt
         git commit -m "Update stats.txt"
-        git push
+        git push origin HEAD:main
+      env:
+        GH_PAT: ${{ secrets.GH_REPO_PAT }}
