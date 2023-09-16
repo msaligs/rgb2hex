@@ -1,0 +1,32 @@
+name: stats_update
+
+on: [push]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Count files, characters, lines, and file size
+      run: |
+        total_files=$(find . -type f | wc -l)
+        total_characters=$(find . -type f -exec cat {} + | wc -m)
+        total_lines=$(find . -type f -exec cat {} + | wc -l)
+        
+        echo "Total Files: $total_files" > stats.txt
+        echo "Total Characters: $total_characters" >> stats.txt
+        echo "Total Lines: $total_lines" >> stats.txt
+        find . -type f -exec du -ch {} + >> stats.txt
+        
+        cat stats.txt
+      shell: bash
+
+    - name: Commit and push stats.txt
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add stats.txt
+        git commit -m "Update stats.txt"
+        git push
